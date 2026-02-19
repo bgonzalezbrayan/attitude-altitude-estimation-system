@@ -1,0 +1,15 @@
+ Yaw Estimation Limitation
+
+The current system uses a 6DOF IMU (accelerometer + gyroscope).
+
+While roll and pitch can be stabilized using gravity as a reference, yaw estimation relies solely on gyroscope integration.
+
+Since no magnetometer or external heading reference is available, yaw is subject to drift and cannot be absolutely corrected.
+
+Future improvements:
+
+Add magnetometer (9DOF)
+
+Implement sensor fusion with heading reference
+
+Explore extended Kalman filtering
